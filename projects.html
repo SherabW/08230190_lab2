@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Sherab Wangdi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<nav>
+    <div class="logo">
+        <img src="National flag of bhutan.jpg" alt="Logo">
+        <span class="site-title">Portfolio</span>
+    </div>
+
+    <div class="menu-box">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+    <div class="projects-container">
+        <h1>My Projects</h1>
+
+        <!-- Project 1 -->
+        <div class="project">
+            <img src="Arduino-DHT11-Humidity-and-Temperature-Sensor-With-LCD-Output.jpg" alt="Temperature & Humidity Monitoring System">
+            <div>
+                <h2>Temperature & Humidity Monitoring System</h2>
+                <p>Developed an Arduino-based system using DHT11 sensors and an I2C LCD to display real-time temperature and humidity data. This project strengthened my understanding of microcontroller programming, sensor integration, and real-time data display.</p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+            <img src="Electronic Medical Records.png" alt="Electronic Medical Records System">
+            <div>
+                <h2>Electronic Medical Records (EMR) System</h2>
+                <p>Created a fully functional MySQL database to manage patients, doctors, prescriptions, and lab results. Implemented SQL queries, joins, and reporting functions to simulate a hospital’s record-keeping system, demonstrating skills in database design, data normalization, and real-world application.</p>
+            </div>
+        </div>
+
+        <!-- Project 3 (Video Project) -->
+        <div class="project">
+            <video autoplay muted loop controls>
+                <source src="video_2025-09-19_02-43-53.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div>
+                <h2>VDT Video Project</h2>
+                <p>Our group chose algorithms as the topic and incorporated photography, graphic design, audio production, and video editing to create an engaging educational video.</p>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project">
+            <img src="Personal website.png" alt="Personal Website Project">
+            <div>
+                <h2>HTML Personal Website</h2>
+                <p>Designed and developed a personal website using HTML, CSS, and JavaScript. Practiced semantic HTML, styling with CSS (Flexbox, Grid), interactivity with JS, and responsive design.</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    &copy; 2025 Sherab Wangdi | Learning, creating, evolving.
+</footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const projects = document.querySelectorAll(".project");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // animate once
+            }
+        });
+    }, { threshold: 0.2 });
+
+    projects.forEach(project => {
+        observer.observe(project);
+    });
+});
+</script>
+
+</body>
+</html>

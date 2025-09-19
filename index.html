@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Sherab Wangdi</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">
+    <img src="National flag of bhutan.jpg" alt="Sherab Wangdi Logo">
+    <span class="site-title">Portfolio</span> 
+  </div>
+
+  <div class="menu-box">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="hamburger" onclick="toggleHamburger(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h3>Hello, It's Me</h3>
+    <h1>Sherab Wangdi</h1>
+    <h2>And I'm a Student</h2>
+    <p>
+      Passionate about technology, programming, and problem-solving.  
+      I love building modern, responsive, and creative web applications.
+    </p>
+
+    <!-- Social Links -->
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="sherab.jpg" alt="Sherab Wangdi">
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Sherab Wangdi | Learning, creating, evolving.
+</footer>
+
+<script>
+function toggleHamburger(hamburger) {
+  hamburger.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

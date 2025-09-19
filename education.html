@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education - Sherab Wangdi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<nav>
+    <div class="logo">
+        <img src="National flag of bhutan.jpg" alt="Logo">
+        <span class="site-title">Portfolio</span> 
+    </div>
+
+    <div class="menu-box">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+    <h1 style="text-align:center; margin-top:30px; color:#2c4e87;">My Education</h1>
+
+    <!-- Zangthi Primary School -->
+    <div class="education-section">
+        <div class="education-img">
+            <img src="Zangthi-primary-school.jpg" alt="Zangthi Primary School">
+        </div>
+        <div class="education-text">
+            <h2>Zangthi Primary School (2009–2015)</h2>
+            <p>
+                My educational journey began at Zangthi Primary School in 2009, 
+                where I studied from class PP to class 6, completing my primary education in 2015. 
+                The school, located in Lauri Gewog, Samdrup Jongkhar Dzongkhag, 
+                laid the foundation for my learning journey.
+            </p>
+        </div>
+    </div>
+
+    <!-- Minjiwoong Central School -->
+    <div class="education-section">
+        <div class="education-img">
+            <img src="Minjiwoong Central school (2).jpg" alt="Minjiwoong Central School">
+        </div>
+        <div class="education-text">
+            <h2>Minjiwoong Central School (2016–2022)</h2>
+            <p>
+                For my secondary education, I attended Minjiwoong Central School, 
+                where I studied from class 7 to class 12 and successfully graduated in 2022. 
+                This school played an important role in shaping my academic skills 
+                and preparing me for higher studies.
+            </p>
+        </div>
+    </div>
+
+    <!-- Samtse College of Education -->
+    <div class="education-section">
+        <div class="education-img">
+            <img src="samtse college of education.jpg" alt="Samtse College of Education">
+        </div>
+        <div class="education-text">
+            <h2>Samtse College of Education (2023–Present)</h2>
+            <p>
+                I am currently pursuing a B.Ed in Information Technology (Secondary)
+                at Samtse College of Education. 
+                This program is helping me build both teaching and technical ICT skills, 
+                including programming, databases, and digital tools, 
+                which I aim to apply in my future career as an educator.
+            </p>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    &copy; 2025 Sherab Wangdi | Learning, creating, evolving.
+</footer>
+
+<script>
+// Reveal animation when scrolling
+const sections = document.querySelectorAll('.education-section');
+
+function revealOnScroll() {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (sectionTop < windowHeight - 100) {
+            section.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>

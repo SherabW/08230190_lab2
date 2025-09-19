@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Sherab Wangdi</title>
+<link rel="stylesheet" href="style.css"> <!-- your main site style -->
+<link rel="stylesheet" href="about.css"> <!-- separate animation style -->
+</head>
+<body>
+
+<nav>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="National flag of bhutan.jpg" alt="Sherab Wangdi Logo">
+         <span class="site-title">Portfolio</span>
+    </div>
+
+    <!-- Menu Box -->
+    <div class="menu-box">
+        <ul>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleHamburger(this)">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<main>
+    <section>
+        <div class="about-container">
+            <!-- Text Left -->
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>Hello! I am Sherab Wangdi, and I am from Zangthi, Tshothang under Samdrup Jongkhar Dzongkhag, Bhutan. Growing up in a remote village taught me the value of tradition, hard work, and helping others. Learning ICT was challenging at first, but over time I changed my mindset. Now, I am passionate about technology and enjoy exploring programming, databases, and problem-solving.</p>
+                <p>In my free time, I like reading, praying, watching movies, listening to music, doing assignments, and learning new skills online. I also enjoy spending time outdoors, whether it’s walking in nature or playing sports with friends.</p>
+                <p>My aspiration is to become an ICT teacher who can inspire students to embrace technology while applying it practically in their communities. I aim to foster curiosity, encourage problem-solving, and guide students in combining modern technology with traditional values to create meaningful solutions.</p>
+            </div>
+
+            <!-- Image Right -->
+            <img src="sherab.jpg" alt="Sherab Wangdi" class="about-img">
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Sherab Wangdi. All Rights Reserved.
+</footer>
+
+<script>
+function toggleHamburger(hamburger) {
+    hamburger.classList.toggle('active');
+}
+
+// Scroll reveal effect
+const aboutContainer = document.querySelector('.about-container');
+const aboutText = document.querySelector('.about-text');
+const aboutImg = document.querySelector('.about-img');
+
+function revealAbout() {
+    const rect = aboutContainer.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+        aboutContainer.classList.add('show');
+        setTimeout(() => aboutText.classList.add('show'), 200);
+        setTimeout(() => aboutImg.classList.add('show'), 400);
+    }
+}
+
+window.addEventListener('scroll', revealAbout);
+window.addEventListener('load', revealAbout);
+</script>
+
+</body>
+</html>
